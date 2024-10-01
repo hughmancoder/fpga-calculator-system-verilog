@@ -44,14 +44,46 @@ Reset State: Returning to Idle. (RESET)
 3. Outputs
    • Seven-segment display showing operands for selected mode
 
-## Additional notes
+## Display
 
-Clock Signal: Ensure you properly configure the clock signal for your design. The Basys3 FPGA has a 100 MHz onboard clock. You might need to create a clock divider if necessary.
+We must quickly cycle through display elements (multiplexing)
 
-Button Debouncing: Mechanical buttons can produce multiple transitions when pressed or released. The debounce module helps to filter out these unintended transitions.
+an = 4'b1110: The first digit (rightmost) is active.
+an = 4'b1101: The second digit is active.
+an = 4'b1011: The third digit is active.
+an = 4'b0111: The fourth digit is active.
 
-Display Refreshing: The seven-segment display requires refreshing if you're displaying more than one digit. In this design, only one digit is active at a time, but you can extend the display driver to handle multiple digits.
+## Constraints
 
-Edge Cases: Be cautious with subtraction operations that might result in negative numbers since we're dealing with unsigned integers. The result might need to be adjusted or limited to prevent incorrect displays.
+TODO: Add constraints
 
-Testing: Simulate your design using a testbench before implementing it on the FPGA to ensure correctness.
+## Switches
+
+set_property PACKAGE_PIN V17 [get_ports {sw[0]}] # SW0 -> operand input
+set_property PACKAGE_PIN V16 [get_ports {sw[1]}] # SW1 -> operand input
+set_property PACKAGE_PIN W16 [get_ports {sw[2]}] # SW2 -> operand input
+set_property PACKAGE_PIN W17 [get_ports {sw[3]}] # SW3 -> operand input
+set_property PACKAGE_PIN U17 [get_ports sw4] # SW4 -> operator selection (add/sub)
+
+## Buttons
+
+set_property PACKAGE_PIN U18 [get_ports reset] # BTNL -> Reset button
+set_property PACKAGE_PIN P17 [get_ports confirm] # BTNU -> Confirm operand
+set_property PACKAGE_PIN M17 [get_ports mode_change] # BTND -> Change display mode
+
+## Seven-segment display
+
+set_property PACKAGE_PIN U14 [get_ports {an[0]}] # AN0 -> Seven-segment anode control
+set_property PACKAGE_PIN U13 [get_ports {an[1]}] # AN1 -> Seven-segment anode control
+set_property PACKAGE_PIN T13 [get_ports {an[2]}] # AN2 -> Seven-segment anode control
+set_property PACKAGE_PIN T14 [get_ports {an[3]}] # AN3 -> Seven-segment anode control
+
+## Seven-segment display segments
+
+set_property PACKAGE_PIN W7 [get_ports {seg[0]}] # CA -> Segment A control
+set_property PACKAGE_PIN W6 [get_ports {seg[1]}] # CB -> Segment B control
+set_property PACKAGE_PIN U8 [get_ports {seg[2]}] # CC -> Segment C control
+set_property PACKAGE_PIN V8 [get_ports {seg[3]}] # CD -> Segment D control
+set_property PACKAGE_PIN U5 [get_ports {seg[4]}] # CE -> Segment E control
+set_property PACKAGE_PIN V5 [get_ports {seg[5]}] # CF -> Segment F control
+set_property PACKAGE_PIN U7 [get_ports {seg[6]}] # CG -> Segment G control
