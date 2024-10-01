@@ -1,40 +1,38 @@
-module display_control(
-    input BTND,                // Button to switch display mode
-    input reset,               // Reset signal
-    input confirmed_operand1,
-    input confirmed_operand2,
-    input [3:0] sw,            // Current input on switches
-    input [3:0] result,        // Calculation result
-    output [6:0] seg,          // Seven-segment display output
-    output [3:0] an,           // Seven-segment display enable
-    output reg mode            // Display mode: 0 for decimal, 1 for hexadecimal
+module display_ctrl (
+    input [3:0] result, operand1, operand2,
+    input mode_change, reset,
+    output reg display_mode, 
+    output reg [6:0] seg, 
+    output reg [3:0] an
 );
 
-    reg [3:0] display_value;
-
-    // Toggle display mode on button press
-    always @(posedge BTND) begin
-        mode <= ~mode;
-    end
-
-    // Select value to display based on input state
     always @(*) begin
-        if (reset)
-            display_value = 4'b0000;
-        else if (!confirmed_operand1)
-            display_value = sw;
-        else if (!confirmed_operand2)
-            display_value = sw;
-        else
-            display_value = result;
+        if (reset) 
+            display_mode <= 0; // Reset display mode to default
+        
+        // Switch display mode between hex and decimal
+        if (mode_change)
+            display_mode <= ~display_mode; 
+
+        // Display either operand or result based on mode
+        if (display_mode) begin
+            // Hexadecimal display
+            seg = hex_to_7seg(result);
+        end else begin
+            // Decimal display
+            seg = dec_to_7seg(result);
+        end
+        an = 4'b1110; // Activate first display digit
     end
 
-    // Seven-segment display module instantiation
-    seven_segment_display decoder (
-        .value(display_value),
-        .mode(mode),
-        .seg(seg),
-        .an(an)
-    );
+    function [6:0] bin_to_7seg;
+        input [3:0] bin;
+        // TODO
+    endfunction
 
+
+    function [6:0] hex_to_7seg;
+        input [3:0] hex;
+        
+    endfunction
 endmodule
