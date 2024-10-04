@@ -1,103 +1,120 @@
 module display_control (
-    input signed [4:0] result,        // 5-bit signed result from the ALU
-    input [3:0] operand1, operand2,   // Operands for display
-    input mode_change, reset,
-    output reg [6:0] seg,             // Segment control
-    output reg [3:0] an               // Anode control (which display to activate)
+    input clk,
+    input signed [5:0] data,        // 6-bit signed result from the ALU
+    input display_mode,             // 0 (decimal), 1 (hex)
+    output reg [6:0] seg,           // Segment control
+    output reg [3:0] an             // Anode control (which display to activate)
 );
+    reg [3:0] digit0, digit1, digit2, digit3;
+    reg [19:0] refresh_counter; // 20-bit counter for multiplexing
+    reg [1:0] digit_select;
+    reg [5:0] abs_data;
+    reg is_negative;
+    reg [7:0] extended_data;
+    integer tens, ones;
 
-    reg [3:0] abs_result_digit1, abs_result_digit2; // Two digits for the absolute value of the result
-    reg is_negative;                                 // Flag to indicate negative result
-    reg display_mode;                                // Mode to switch between hex and decimal
-
-    always @(*) begin
-        if (reset) begin
-            display_mode <= 0; // Reset display mode to default (decimal)
-        end else if (mode_change) begin
-            display_mode <= ~display_mode; // Switch between hex and decimal mode
-        end
-
-        // Check if the result is negative and calculate the absolute value
-        if (result < 0) begin
-            is_negative = 1;
-            abs_result_digit1 = -result % 10;  // Least significant digit of the absolute value
-            abs_result_digit2 = -result / 10;  // Most significant digit of the absolute value
-        end else begin
-            is_negative = 0;
-            abs_result_digit1 = result % 10;   // Least significant digit
-            abs_result_digit2 = result / 10;   // Most significant digit
-        end
-
-        // Select which display to activate and set the appropriate segments
-        // TODO: look into correct display modes and test
-        case (an)
-            4'b1110: begin
-                if (is_negative)
-                    seg = 7'b0111111;  // Display minus sign ('-')
-                else if (display_mode) begin
-                    seg = hex_to_7seg(abs_result_digit1);
-                end else begin
-                    seg = dec_to_7seg(abs_result_digit1);
-                end
-            end
-            4'b1101: begin
-                if (display_mode) begin
-                    seg = hex_to_7seg(abs_result_digit2);
-                end else begin
-                    seg = dec_to_7seg(abs_result_digit2);
-                end
-            end
-            default: seg = 7'b1111111; // Default: turn off segments
-        endcase
-    end
-
+    // Decimal to 7-segment encoding function
     function [6:0] dec_to_7seg;
         input [3:0] bin;
-        case (bin)
-            4'b0000: dec_to_7seg = 7'b1000000; // 0
-            4'b0001: dec_to_7seg = 7'b1111001; // 1
-            4'b0010: dec_to_7seg = 7'b0100100; // 2
-            4'b0011: dec_to_7seg = 7'b0110000; // 3
-            4'b0100: dec_to_7seg = 7'b0011001; // 4
-            4'b0101: dec_to_7seg = 7'b0010010; // 5
-            4'b0110: dec_to_7seg = 7'b0000010; // 6
-            4'b0111: dec_to_7seg = 7'b1111000; // 7
-            4'b1000: dec_to_7seg = 7'b0000000; // 8
-            4'b1001: dec_to_7seg = 7'b0010000; // 9
-            default: dec_to_7seg = 7'b1111111; // Invalid
-        endcase
+        begin
+            case (bin)
+                4'b0000: dec_to_7seg = 7'b1000000; // 0
+                4'b0001: dec_to_7seg = 7'b1111001; // 1
+                4'b0010: dec_to_7seg = 7'b0100100; // 2
+                4'b0011: dec_to_7seg = 7'b0110000; // 3
+                4'b0100: dec_to_7seg = 7'b0011001; // 4
+                4'b0101: dec_to_7seg = 7'b0010010; // 5
+                4'b0110: dec_to_7seg = 7'b0000010; // 6
+                4'b0111: dec_to_7seg = 7'b1111000; // 7
+                4'b1000: dec_to_7seg = 7'b0000000; // 8
+                4'b1001: dec_to_7seg = 7'b0010000; // 9
+                4'b1110: dec_to_7seg = 7'b0111111; // '-' (negative sign)
+                4'b1111: dec_to_7seg = 7'b1111111; // Blank
+                default: dec_to_7seg = 7'b1111111; // Invalid
+            endcase
+        end
     endfunction
 
+    // Hexadecimal to 7-segment encoding function
     function [6:0] hex_to_7seg;
         input [3:0] hex;
-        case (hex)
-            4'b0000: hex_to_7seg = 7'b1000000; // 0
-            4'b0001: hex_to_7seg = 7'b1111001; // 1
-            4'b0010: hex_to_7seg = 7'b0100100; // 2
-            4'b0011: hex_to_7seg = 7'b0110000; // 3
-            4'b0100: hex_to_7seg = 7'b0011001; // 4
-            4'b0101: hex_to_7seg = 7'b0010010; // 5
-            4'b0110: hex_to_7seg = 7'b0000010; // 6
-            4'b0111: hex_to_7seg = 7'b1111000; // 7
-            4'b1000: hex_to_7seg = 7'b0000000; // 8
-            4'b1001: hex_to_7seg = 7'b0010000; // 9
-            4'b1010: hex_to_7seg = 7'b0001000; // A
-            4'b1011: hex_to_7seg = 7'b0000011; // B
-            4'b1100: hex_to_7seg = 7'b1000110; // C
-            4'b1101: hex_to_7seg = 7'b0100001; // D
-            4'b1110: hex_to_7seg = 7'b0000110; // E
-            4'b1111: hex_to_7seg = 7'b0001110; // F
-            default: hex_to_7seg = 7'b1111111; // Invalid
-        endcase
+        begin
+            case (hex)
+                4'b0000: hex_to_7seg = 7'b1000000; // 0
+                4'b0001: hex_to_7seg = 7'b1111001; // 1
+                4'b0010: hex_to_7seg = 7'b0100100; // 2
+                4'b0011: hex_to_7seg = 7'b0110000; // 3
+                4'b0100: hex_to_7seg = 7'b0011001; // 4
+                4'b0101: hex_to_7seg = 7'b0010010; // 5
+                4'b0110: hex_to_7seg = 7'b0000010; // 6
+                4'b0111: hex_to_7seg = 7'b1111000; // 7
+                4'b1000: hex_to_7seg = 7'b0000000; // 8
+                4'b1001: hex_to_7seg = 7'b0010000; // 9
+                4'b1010: hex_to_7seg = 7'b0001000; // A
+                4'b1011: hex_to_7seg = 7'b0000011; // B
+                4'b1100: hex_to_7seg = 7'b1000110; // C
+                4'b1101: hex_to_7seg = 7'b0100001; // D
+                4'b1110: hex_to_7seg = 7'b0000110; // E
+                4'b1111: hex_to_7seg = 7'b0001110; // F
+                default: hex_to_7seg = 7'b1111111; // Invalid
+            endcase
+        end
     endfunction
 
-    // Multiplexing logic to select which digit to display
-    always @(posedge clk) begin
-        if (reset) begin
-            an <= 4'b1110; // Activate first display
+    // Determine absolute value and sign
+    always @(*) begin
+        if (data < 0) begin
+            abs_data = -data;
+            is_negative = 1;
         end else begin
-            an <= {an[2:0], an[3]}; // Rotate through the digits
+            abs_data = data;
+            is_negative = 0;
         end
     end
 
+    // Calculate digits to display
+    always @(*) begin
+        if (display_mode == 0) begin // Decimal mode
+            tens = abs_data / 10;
+            ones = abs_data % 10;
+            digit0 = ones[3:0];
+            digit1 = tens[3:0];
+            digit2 = is_negative ? 4'hE : 4'hF; // '-' sign or blank
+            digit3 = 4'hF; // Blank
+        end else begin // Hex mode
+            extended_data = { {2{data[5]}}, data[5:0] }; // Sign-extend to 8 bits
+            digit0 = extended_data[3:0];
+            digit1 = extended_data[7:4];
+            digit2 = 4'hF; // Blank
+            digit3 = 4'hF; // Blank
+        end
+    end
+
+    // Refresh counter for multiplexing
+    always @(posedge clk) begin
+        refresh_counter <= refresh_counter + 1;
+        digit_select <= refresh_counter[19:18]; // Adjust bits for refresh rate
+    end
+
+    // Multiplexing logic to drive the 7-segment display
+    always @(*) begin
+        case (digit_select)
+            2'b00: begin
+                an = 4'b1110; // Activate AN0 (rightmost digit)
+                seg = display_mode ? hex_to_7seg(digit0) : dec_to_7seg(digit0);
+            end
+            2'b01: begin
+                an = 4'b1101; // Activate AN1
+                seg = display_mode ? hex_to_7seg(digit1) : dec_to_7seg(digit1);
+            end
+            2'b10: begin
+                an = 4'b1011; // Activate AN2
+                seg = display_mode ? hex_to_7seg(digit2) : dec_to_7seg(digit2);
+            end
+            2'b11: begin
+                an = 4'b0111; // Activate AN3 (leftmost digit)
+                seg = display_mode ? hex_to_7seg(digit3) : dec_to_7seg(digit3);
+            end
+        endcase
+    end
 endmodule
