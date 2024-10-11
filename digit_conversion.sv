@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module digit_conversion (
     input signed [5:0] data,        // 6-bit signed result from the ALU
     input display_mode,             // 0 (decimal), 1 (hex)
@@ -7,13 +9,14 @@ module digit_conversion (
 );
     
     reg [5:0] magnitude_sign_data;
+    logic [7:0] extended_data; 
     
     integer tens, ones;
     integer tens, ones;
       always @(*) begin 
         if (data[5]) begin 
             is_negative = 1;
-            magnitude_sign_data = -data; // Get magnitude
+            magnitude_sign_data = -data; 
         end else begin
             is_negative = 0;
             magnitude_sign_data = data;
@@ -29,6 +32,5 @@ module digit_conversion (
             digit0 = extended_data[3:0];
             digit1 = extended_data[7:4];
         end
-    end
     end
 endmodule
