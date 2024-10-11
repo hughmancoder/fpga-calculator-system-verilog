@@ -1,17 +1,10 @@
-// TODO: implement with combinational logic
 module alu (
-    input signed [5:0] operand1,
-    input signed [5:0] operand2, 
-    input operator_select,          // sw[4]
-    output reg signed [5:0] result  // 6-bit signed result to handle negative results
+    input signed [5:0] operand1, 
+    input signed [5:0] operand2,
+    input operator_select, // 0 for subtraction, 1 for addition
+    output reg signed [5:0] result
 );
-
-    always @(*) begin
-        if (operator_select) begin
-            result = operand1 + operand2;
-        end else begin
-            result = operand1 - operand2;
-        end
+    always_comb begin
+        result = operator_select ? operand1 + operand2 : operand1 - operand2;
     end
-
-endmodule
+endmodule;

@@ -26,10 +26,10 @@ module calculator (
     // Instantiate the display control module
     display_control display (
         .clk(clk),
-        .data(display_result),          // Pass result from control_logic
-        .display_mode(display_mode),    // Pass current display mode (decimal/hex)
-        .seg(seg),                      // 7-segment display output
-        .an(an)                         // Anode control for multiplexing displays
+        .data(display_result),          
+        .display_mode(display_mode),    
+        .seg(seg),                      
+        .an(an)                         
     );
     
 endmodule
