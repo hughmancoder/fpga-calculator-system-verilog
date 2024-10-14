@@ -56,16 +56,5 @@ module control_logic (
     
     assign display_result = (state == S5_CALCULATE) ? alu_result : operand_input_display;
     
-    //    always_ff @(posedge clk or posedge reset) begin
-    //        if (reset) begin
-    //            display_result <= 6'b0;
-    //        end else begin
-    //            if (state == S5_CALCULATE) begin
-    //                display_result <= alu_result;  
-    //            end else begin
-    //                display_result <= operand_input_display;  
-    //            end
-    //        end
-    //    end
 
 endmodule
