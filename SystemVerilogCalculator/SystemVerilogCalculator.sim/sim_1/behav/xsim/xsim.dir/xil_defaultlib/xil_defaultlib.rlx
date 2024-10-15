@@ -1,0 +1,17 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sim_1/new/alu_tb.sv,1728962242,systemVerilog,,,,alu_tb,,,,,,,,
+U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sim_1/new/control_logic_tb.sv,1728619133,systemVerilog,,,,control_logic_tb,,,,,,,,
+U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sim_1/new/digit_conversion_tb.sv,1728611479,systemVerilog,,,,digit_conversion_tb,,,,,,,,
+U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sim_1/new/state_machine_tb.sv,1728615668,systemVerilog,,,,state_machine_tb,,,,,,,,
+U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/alu.sv,1728963802,systemVerilog,,U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/full_adder.sv,,alu,,,,,,,,
+U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/calculator.sv,1728013909,systemVerilog,,,,calculator,,,,,,,,
+U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/control_logic.sv,1728619797,systemVerilog,,U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/input_handler.sv,,control_logic,,,,,,,,
+U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/digit_conversion.sv,1728611105,systemVerilog,,U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sim_1/new/digit_conversion_tb.sv,,digit_conversion,,,,,,,,
+U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/display_control.sv,1728017840,systemVerilog,,U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/calculator.sv,,display_control,,,,,,,,
+U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/full_adder.sv,1728962590,systemVerilog,,U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sim_1/new/alu_tb.sv,,full_adder,,,,,,,,
+U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/input_handler.sv,1728619689,systemVerilog,,U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/state_machine.sv,,input_handler,,,,,,,,
+U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/state_machine.sv,1728617237,systemVerilog,,U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sim_1/new/control_logic_tb.sv,,state_machine,,,,,,,,

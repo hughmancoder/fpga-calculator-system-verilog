@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../SystemVerilogCalculator.srcs/sources_1/new/digit_conversion.sv" \
+"../../../../SystemVerilogCalculator.srcs/sources_1/new/display_control.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

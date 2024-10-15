@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../SystemVerilogCalculator.srcs/sources_1/new/alu.sv" \
+"../../../../SystemVerilogCalculator.srcs/sources_1/new/control_logic.sv" \
+"../../../../SystemVerilogCalculator.srcs/sources_1/new/input_handler.sv" \
+"../../../../SystemVerilogCalculator.srcs/sources_1/new/state_machine.sv" \
+"../../../../SystemVerilogCalculator.srcs/sim_1/new/control_logic_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

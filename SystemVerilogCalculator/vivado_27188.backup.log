@@ -1,0 +1,792 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Oct  4 14:24:17 2024
+# Process ID: 27188
+# Current directory: U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7548 U:\Xilinix\SystemVerilogAssignment\SystemVerilogCalculator\SystemVerilogCalculator.xpr
+# Log file: U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/vivado.log
+# Journal file: U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 826.164 ; gain = 178.113
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+[Fri Oct  4 14:25:37 2024] Launched synth_1...
+Run output will be captured here: U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 16
+[Fri Oct  4 14:26:34 2024] Launched impl_1...
+Run output will be captured here: U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1645.277 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1645.277 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1645.297 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 1853.738 ; gain = 954.320
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'calculator' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj calculator_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/control_logic.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_logic
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/display_control.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/calculator.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module calculator
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 16326edd87224987a5e92e4abdb452dd --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot calculator_behav xil_defaultlib.calculator xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.control_logic
+Compiling module xil_defaultlib.display_control
+Compiling module xil_defaultlib.calculator
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot calculator_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1863.945 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "calculator_behav -key {Behavioral:sim_1:Functional:calculator} -tclbatch {calculator.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source calculator.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'calculator_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:14 . Memory (MB): peak = 1863.945 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'calculator' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj calculator_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/control_logic.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_logic
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/display_control.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/calculator.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module calculator
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 16326edd87224987a5e92e4abdb452dd --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot calculator_behav xil_defaultlib.calculator xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.control_logic
+Compiling module xil_defaultlib.display_control
+Compiling module xil_defaultlib.calculator
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot calculator_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "calculator_behav -key {Behavioral:sim_1:Functional:calculator} -tclbatch {calculator.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source calculator.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'calculator_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1863.945 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'calculator' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj calculator_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/control_logic.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_logic
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/display_control.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/calculator.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module calculator
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 16326edd87224987a5e92e4abdb452dd --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot calculator_behav xil_defaultlib.calculator xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.control_logic
+Compiling module xil_defaultlib.display_control
+Compiling module xil_defaultlib.calculator
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot calculator_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "calculator_behav -key {Behavioral:sim_1:Functional:calculator} -tclbatch {calculator.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source calculator.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'calculator_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1863.945 ; gain = 0.000
+set_property top tb_control_logic [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_control_logic' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_control_logic_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sim_1/new/control_logic_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_control_logic
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 16326edd87224987a5e92e4abdb452dd --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_control_logic_behav xil_defaultlib.tb_control_logic xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.control_logic
+Compiling module xil_defaultlib.tb_control_logic
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_control_logic_behav
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim/xsim.dir/tb_control_logic_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Oct  4 14:37:17 2024...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1872.555 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_control_logic_behav -key {Behavioral:sim_1:Functional:tb_control_logic} -tclbatch {tb_control_logic.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source tb_control_logic.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 270 ns : File "U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sim_1/new/control_logic_tb.sv" Line 74
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_control_logic_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 1884.340 ; gain = 11.785
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_control_logic' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_control_logic_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/control_logic.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_logic
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sim_1/new/control_logic_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_control_logic
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 16326edd87224987a5e92e4abdb452dd --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_control_logic_behav xil_defaultlib.tb_control_logic xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.control_logic
+Compiling module xil_defaultlib.tb_control_logic
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_control_logic_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_control_logic_behav -key {Behavioral:sim_1:Functional:tb_control_logic} -tclbatch {tb_control_logic.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source tb_control_logic.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 290 ns : File "U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sim_1/new/control_logic_tb.sv" Line 76
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_control_logic_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1928.012 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_control_logic' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_control_logic_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/control_logic.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_logic
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sim_1/new/control_logic_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_control_logic
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 16326edd87224987a5e92e4abdb452dd --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_control_logic_behav xil_defaultlib.tb_control_logic xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.control_logic
+Compiling module xil_defaultlib.tb_control_logic
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_control_logic_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_control_logic_behav -key {Behavioral:sim_1:Functional:tb_control_logic} -tclbatch {tb_control_logic.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source tb_control_logic.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 290 ns : File "U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sim_1/new/control_logic_tb.sv" Line 76
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_control_logic_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1928.012 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.runs/synth_1
+
+launch_runs synth_1 -jobs 16
+[Fri Oct  4 14:47:40 2024] Launched synth_1...
+Run output will be captured here: U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 16
+[Fri Oct  4 14:48:08 2024] Launched impl_1...
+Run output will be captured here: U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.runs/impl_1/runme.log
+refresh_design
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 2051.664 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 2051.664 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_control_logic' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_control_logic_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/control_logic.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_logic
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sim_1/new/control_logic_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_control_logic
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 16326edd87224987a5e92e4abdb452dd --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_control_logic_behav xil_defaultlib.tb_control_logic xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.control_logic
+Compiling module xil_defaultlib.tb_control_logic
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_control_logic_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_control_logic_behav -key {Behavioral:sim_1:Functional:tb_control_logic} -tclbatch {tb_control_logic.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source tb_control_logic.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 290 ns : File "U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sim_1/new/control_logic_tb.sv" Line 70
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_control_logic_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2171.625 ; gain = 1.203
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_control_logic' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_control_logic_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/control_logic.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_logic
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sim_1/new/control_logic_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_control_logic
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 16326edd87224987a5e92e4abdb452dd --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_control_logic_behav xil_defaultlib.tb_control_logic xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.control_logic
+Compiling module xil_defaultlib.tb_control_logic
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_control_logic_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_control_logic_behav -key {Behavioral:sim_1:Functional:tb_control_logic} -tclbatch {tb_control_logic.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source tb_control_logic.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 310 ns : File "U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sim_1/new/control_logic_tb.sv" Line 74
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_control_logic_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 2171.625 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_control_logic' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_control_logic_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/control_logic.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_logic
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sim_1/new/control_logic_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_control_logic
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 16326edd87224987a5e92e4abdb452dd --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_control_logic_behav xil_defaultlib.tb_control_logic xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.control_logic
+Compiling module xil_defaultlib.tb_control_logic
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_control_logic_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_control_logic_behav -key {Behavioral:sim_1:Functional:tb_control_logic} -tclbatch {tb_control_logic.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source tb_control_logic.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Test Passed: Addition result is correct (8)
+Test Passed
+Test Failed: Expected display_mode = 1 after toggle, got 0
+Test Failed: Expected display_mode = 0 after second toggle, got 1
+$finish called at time : 270 ns : File "U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sim_1/new/control_logic_tb.sv" Line 90
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_control_logic_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2171.625 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_control_logic' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_control_logic_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/control_logic.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module control_logic
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sim_1/new/control_logic_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_control_logic
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 16326edd87224987a5e92e4abdb452dd --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_control_logic_behav xil_defaultlib.tb_control_logic xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.control_logic
+Compiling module xil_defaultlib.tb_control_logic
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_control_logic_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_control_logic_behav -key {Behavioral:sim_1:Functional:tb_control_logic} -tclbatch {tb_control_logic.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source tb_control_logic.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Test Passed: Addition result is correct (8)
+Test Passed
+Test Passed: Display mode toggled correctly
+Test Passed: Display mode toggled correctly back
+$finish called at time : 270 ns : File "U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sim_1/new/control_logic_tb.sv" Line 90
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_control_logic_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 2171.625 ; gain = 0.000
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sim_1/new/display_control_tb.sv w ]
+add_files -fileset sim_1 U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sim_1/new/display_control_tb.sv
+update_compile_order -fileset sim_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_control_logic' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_control_logic_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 16326edd87224987a5e92e4abdb452dd --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_control_logic_behav xil_defaultlib.tb_control_logic xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_control_logic_behav -key {Behavioral:sim_1:Functional:tb_control_logic} -tclbatch {tb_control_logic.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source tb_control_logic.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Test Passed: Addition result is correct (8)
+Test Passed
+Test Passed: Display mode toggled correctly
+Test Passed: Display mode toggled correctly back
+$finish called at time : 270 ns : File "U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sim_1/new/control_logic_tb.sv" Line 90
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_control_logic_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 2171.625 ; gain = 0.000
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.runs/synth_1
+
+launch_runs impl_1 -jobs 16
+[Fri Oct  4 15:21:40 2024] Launched synth_1...
+Run output will be captured here: U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.runs/synth_1/runme.log
+[Fri Oct  4 15:21:40 2024] Launched impl_1...
+Run output will be captured here: U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.runs/impl_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_control_logic' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_control_logic_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 16326edd87224987a5e92e4abdb452dd --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_control_logic_behav xil_defaultlib.tb_control_logic xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_control_logic_behav -key {Behavioral:sim_1:Functional:tb_control_logic} -tclbatch {tb_control_logic.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source tb_control_logic.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Test Passed: Addition result is correct (8)
+Test Passed
+Test Passed: Display mode toggled correctly
+Test Passed: Display mode toggled correctly back
+$finish called at time : 270 ns : File "U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sim_1/new/control_logic_tb.sv" Line 90
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_control_logic_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+refresh_design
+INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 2171.625 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 2171.625 ; gain = 0.000
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Fri Oct  4 15:22:56 2024] Launched impl_1...
+Run output will be captured here: U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2323.574 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183AA1342A
+set_property PROGRAM.FILE {U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.runs/impl_1/calculator.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.runs/impl_1/calculator.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183AA1342A
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Oct  4 15:30:54 2024...

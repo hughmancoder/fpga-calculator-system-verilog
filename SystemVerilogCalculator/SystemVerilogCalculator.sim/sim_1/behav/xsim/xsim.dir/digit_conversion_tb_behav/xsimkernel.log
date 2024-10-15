@@ -1,0 +1,7 @@
+Running: xsim.dir/digit_conversion_tb_behav/xsimk.exe -simmode gui -wdb digit_conversion_tb_behav.wdb -simrunnum 0 -socket 55518
+Design successfully loaded
+Design Loading Memory Usage: 6776 KB (Peak: 6776 KB)
+Design Loading CPU Usage: 46 ms
+Simulation completed
+Simulation Memory Usage: 7412 KB (Peak: 7412 KB)
+Simulation CPU Usage: 62 ms

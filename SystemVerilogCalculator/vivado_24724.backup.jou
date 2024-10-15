@@ -1,0 +1,253 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Oct 11 11:40:07 2024
+# Process ID: 24724
+# Current directory: U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent23396 U:\Xilinix\SystemVerilogAssignment\SystemVerilogCalculator\SystemVerilogCalculator.xpr
+# Log file: U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/vivado.log
+# Journal file: U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.xpr
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/data_converter.sv] -no_script -reset -force -quiet
+remove_files  U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/data_converter.sv
+close [ open U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/digit_conversion.sv w ]
+add_files U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/digit_conversion.sv
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+source tb_control_logic.tcl
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sim_1/new/digit_conversion_tb.sv w ]
+add_files -fileset sim_1 U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sim_1/new/digit_conversion_tb.sv
+update_compile_order -fileset sim_1
+close_sim
+launch_simulation
+source tb_control_logic.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top digit_conversion_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+launch_simulation
+open_run impl_1
+launch_simulation
+open_hw
+connect_hw_server
+open_hw_target
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.runs/impl_1/calculator.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top calculator [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top display_control [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+launch_simulation
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top digit_conversion_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source digit_conversion_tb.tcl
+close_sim
+launch_simulation
+source digit_conversion_tb.tcl
+close_sim
+launch_simulation
+source digit_conversion_tb.tcl
+close [ open U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/state_machine.sv w ]
+add_files U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/state_machine.sv
+update_compile_order -fileset sources_1
+close [ open U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/input_handler.sv w ]
+add_files U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/input_handler.sv
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top control_logic_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+close [ open U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/alu.sv w ]
+add_files U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/alu.sv
+update_compile_order -fileset sources_1
+launch_simulation
+source control_logic_tb.tcl
+close_sim
+launch_simulation
+source control_logic_tb.tcl
+close_sim
+launch_simulation
+source control_logic_tb.tcl
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sim_1/new/state_machine_tb.sv w ]
+add_files -fileset sim_1 U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sim_1/new/state_machine_tb.sv
+update_compile_order -fileset sim_1
+close_sim
+launch_simulation
+source control_logic_tb.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top state_machine_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source state_machine_tb.tcl
+close_sim
+launch_simulation
+source state_machine_tb.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top control_logic_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+current_sim simulation_9
+close_sim
+current_sim simulation_5
+close_sim
+close_sim
+launch_simulation
+source control_logic_tb.tcl
+close_sim
+launch_simulation
+source control_logic_tb.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+close_sim
+launch_simulation
+source control_logic_tb.tcl
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+refresh_design
+close_sim
+launch_simulation
+source control_logic_tb.tcl
+close_sim
+launch_simulation
+source control_logic_tb.tcl
+add_bp {U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sim_1/new/control_logic_tb.sv} 26
+remove_bps -file {U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sim_1/new/control_logic_tb.sv} -line 26
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.runs/impl_1/calculator.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_sim
+launch_simulation
+source control_logic_tb.tcl
+close_sim
+launch_simulation
+source control_logic_tb.tcl
+close_sim
+launch_simulation
+source control_logic_tb.tcl
+close_sim
+launch_simulation
+source control_logic_tb.tcl
+close_sim
+launch_simulation
+source control_logic_tb.tcl
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source control_logic_tb.tcl
+close_sim
+launch_simulation
+source control_logic_tb.tcl
+close_sim
+launch_simulation
+source control_logic_tb.tcl
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source control_logic_tb.tcl
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source control_logic_tb.tcl
+close_sim
+launch_simulation
+source control_logic_tb.tcl
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.runs/impl_1/calculator.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.runs/impl_1/calculator.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.runs/impl_1/calculator.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_sim
+close_sim

@@ -1,0 +1,371 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Oct 15 14:14:28 2024
+# Process ID: 23180
+# Current directory: U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.runs/synth_1
+# Command line: vivado.exe -log calculator.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source calculator.tcl
+# Log file: U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.runs/synth_1/calculator.vds
+# Journal file: U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source calculator.tcl -notrace
+Command: synth_design -top calculator -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 28036 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 378.750 ; gain = 99.699
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'calculator' [U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/calculator.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'control_logic' [U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/control_logic.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'state_machine' [U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/state_machine.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'state_machine' (1#1) [U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/state_machine.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'alu' [U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/alu.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'full_adder' [U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/full_adder.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'full_adder' (2#1) [U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/full_adder.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (3#1) [U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/alu.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'input_handler' [U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/input_handler.sv:3]
+WARNING: [Synth 8-151] case item 3'b011 is unreachable [U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/input_handler.sv:41]
+INFO: [Synth 8-6155] done synthesizing module 'input_handler' (4#1) [U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/input_handler.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'control_logic' (5#1) [U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/control_logic.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'display_control' [U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/display_control.sv:1]
+	Parameter NEG_SIGN_SEG bound to: 7'b0111111 
+	Parameter BLANK_SEG bound to: 7'b1111111 
+INFO: [Synth 8-6157] synthesizing module 'digit_conversion' [U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/digit_conversion.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'digit_conversion' (6#1) [U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/digit_conversion.sv:3]
+INFO: [Synth 8-226] default block is never used [U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/display_control.sv:76]
+INFO: [Synth 8-226] default block is never used [U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/display_control.sv:76]
+INFO: [Synth 8-6155] done synthesizing module 'display_control' (7#1) [U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/display_control.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'calculator' (8#1) [U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/calculator.sv:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 435.012 ; gain = 155.961
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 435.012 ; gain = 155.961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 435.012 ; gain = 155.961
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/constrs_1/new/basys3.xdc]
+WARNING: [Vivado 12-584] No ports matched 'dp'. [U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/constrs_1/new/basys3.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/constrs_1/new/basys3.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/constrs_1/new/basys3.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/constrs_1/new/basys3.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/calculator_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/calculator_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 761.492 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 761.516 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 761.516 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 761.516 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 761.516 ; gain = 482.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 761.516 ; gain = 482.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 761.516 ; gain = 482.465
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'state_machine'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 S0_IDLE |                              000 |                              000
+                  S1_OP1 |                              001 |                              001
+               S2_OP1_WR |                              010 |                              010
+                  S3_OP2 |                              011 |                              011
+               S4_OP2_WR |                              100 |                              100
+            S5_CALCULATE |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'state_machine'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 761.516 ; gain = 482.465
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 24    
++---Registers : 
+	                6 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	  27 Input      7 Bit        Muxes := 1     
+	  31 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 2     
+	   4 Input      4 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module state_machine 
+Detailed RTL Component Info : 
++---Muxes : 
+	   6 Input      3 Bit        Muxes := 2     
+	   6 Input      1 Bit        Muxes := 1     
+Module full_adder 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
+Module alu 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 1     
+Module input_handler 
+Detailed RTL Component Info : 
++---Registers : 
+	                6 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   5 Input      1 Bit        Muxes := 3     
+Module control_logic 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 1     
+Module digit_conversion 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+Module display_control 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	  27 Input      7 Bit        Muxes := 1     
+	  31 Input      7 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3886] merging instance 'control/input_handler_instance/operand_input_display_reg[4]' (FDCE) to 'control/input_handler_instance/operand_input_display_reg[5]'
+INFO: [Synth 8-3886] merging instance 'control/input_handler_instance/operand2_reg[4]' (FDCE) to 'control/input_handler_instance/operand2_reg[5]'
+INFO: [Synth 8-3886] merging instance 'control/input_handler_instance/operand1_reg[4]' (FDCE) to 'control/input_handler_instance/operand1_reg[5]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control/input_handler_instance/operand2_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control/input_handler_instance/operand1_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\control/input_handler_instance/operand_input_display_reg[5] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 761.516 ; gain = 482.465
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 761.516 ; gain = 482.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 784.137 ; gain = 505.086
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 784.137 ; gain = 505.086
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 784.137 ; gain = 505.086
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 784.137 ; gain = 505.086
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 784.137 ; gain = 505.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 784.137 ; gain = 505.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 784.137 ; gain = 505.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 784.137 ; gain = 505.086
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     5|
+|3     |LUT1   |     1|
+|4     |LUT2   |    10|
+|5     |LUT3   |     3|
+|6     |LUT4   |    12|
+|7     |LUT5   |     6|
+|8     |LUT6   |    23|
+|9     |FDCE   |    17|
+|10    |FDRE   |    22|
+|11    |IBUF   |     9|
+|12    |OBUF   |    11|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------------------------+----------------+------+
+|      |Instance                   |Module          |Cells |
++------+---------------------------+----------------+------+
+|1     |top                        |                |   120|
+|2     |  control                  |control_logic   |    64|
+|3     |    input_handler_instance |input_handler   |    54|
+|4     |    state_machine_instance |state_machine   |    10|
+|5     |  display                  |display_control |    35|
++------+---------------------------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 784.137 ; gain = 505.086
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 784.137 ; gain = 178.582
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 784.137 ; gain = 505.086
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 784.246 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+38 Infos, 2 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 784.246 ; gain = 517.562
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 784.246 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.runs/synth_1/calculator.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file calculator_utilization_synth.rpt -pb calculator_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 15 14:14:51 2024...

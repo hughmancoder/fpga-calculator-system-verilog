@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "U:/Xilinix/SystemVerilogAssignment/project_1/project_1.sim/sim_1/synth/func/xsim/digital_calculator_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module digital_calculator
+INFO: [VRFC 10-311] analyzing module display_control
+INFO: [VRFC 10-311] analyzing module glbl

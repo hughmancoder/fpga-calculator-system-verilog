@@ -1,0 +1,62 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Oct  4 17:52:19 2024
+# Process ID: 20296
+# Current directory: U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22736 U:\Xilinix\SystemVerilogAssignment\SystemVerilogCalculator\SystemVerilogCalculator.xpr
+# Log file: U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/vivado.log
+# Journal file: U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source tb_control_logic.tcl
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+open_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+close_design
+open_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.runs/impl_1/calculator.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.runs/impl_1/calculator.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.runs/impl_1/calculator.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+close_sim
+launch_simulation
+source tb_control_logic.tcl
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.runs/impl_1/calculator.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_sim
+launch_simulation
+source tb_control_logic.tcl
+close [ open U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/data_converter.sv w ]
+add_files U:/Xilinix/SystemVerilogAssignment/SystemVerilogCalculator/SystemVerilogCalculator.srcs/sources_1/new/data_converter.sv
+update_compile_order -fileset sources_1
+close_sim
