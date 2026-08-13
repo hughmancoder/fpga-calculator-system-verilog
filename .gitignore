@@ -1,1 +1,13 @@
 .DS_Store
+
+# Xilinx Vivado generated files
+SystemVerilogCalculator/.Xil/
+SystemVerilogCalculator/*.cache/
+SystemVerilogCalculator/*.hw/
+SystemVerilogCalculator/*.ip_user_files/
+SystemVerilogCalculator/*.runs/
+SystemVerilogCalculator/*.sim/
+SystemVerilogCalculator/*.jou
+SystemVerilogCalculator/*.log
+SystemVerilogCalculator/*.backup.jou
+SystemVerilogCalculator/*.backup.log
